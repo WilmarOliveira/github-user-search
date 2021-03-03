@@ -1,0 +1,36 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 115px;
+    padding-left: 120px;
+}
+
+.home-title {
+    width: 580px;
+}
+
+.home-title h1 {
+    color: #062847;
+    font-size: 48px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+}
+
+.home-description {
+    margin-top: 24px;
+    width: 615px;
+    height: 216px;
+}
+
+.home-description p:nth-child(2) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.home-description p {
+    font-size: 20px;
+    line-height: 36px;
+    color: #5A6774;
+}
