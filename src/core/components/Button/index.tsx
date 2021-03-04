@@ -1,12 +1,14 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 type Props = {
     children: string;
+    linkTo: string;
 }
 
-const Button = ({ children }: Props) => {
+const Button = ({ children, linkTo }: Props) => {
     return (
-        <div className="button-container" >{children}</div>
+        <Link className="button-container" to={linkTo} >{children}</Link>
     );
 }
 

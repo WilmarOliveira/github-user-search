@@ -16,7 +16,7 @@ const Home = () => {
                 <p>Este design foi adaptado a partir de Ant Design System for Figma, de Mateusz Wierzbicki: antforfigma@gmail.com</p>
             </div>
             <div className="home-button" >
-                <Button >Começar</Button>
+                <Button linkTo="/find" >Começar</Button>
             </div>
         </div>
     );
