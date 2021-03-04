@@ -5,3 +5,8 @@
     box-sizing: border-box;
     outline: 0;
 }
+
+a:hover {
+    text-decoration: none;
+    color: unset;
+}

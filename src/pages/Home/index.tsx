@@ -2,6 +2,9 @@ import Button from '../../core/components/Button';
 import './styles.css';
 
 const Home = () => {
+
+
+
     return (
         <div className="home-container" >
             <div className="home-title" >
@@ -13,7 +16,7 @@ const Home = () => {
                 <p>Este design foi adaptado a partir de Ant Design System for Figma, de Mateusz Wierzbicki: antforfigma@gmail.com</p>
             </div>
             <div className="home-button" >
-                <Button>Começar</Button>
+                <Button >Começar</Button>
             </div>
         </div>
     );
