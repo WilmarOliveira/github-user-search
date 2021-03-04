@@ -1,4 +1,4 @@
-import Button from '../../core/components/Button';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 const Home = () => {
@@ -16,7 +16,9 @@ const Home = () => {
                 <p>Este design foi adaptado a partir de Ant Design System for Figma, de Mateusz Wierzbicki: antforfigma@gmail.com</p>
             </div>
             <div className="home-button" >
-                <Button linkTo="/find" >Começar</Button>
+                <div className="button-container">
+                    <Link to="/find" >Começar</Link>
+                </div>
             </div>
         </div>
     );

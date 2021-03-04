@@ -1,4 +1,3 @@
-import Button from '../../core/components/Button';
 import './styles.css';
 
 const FindGitProfile = () => {
@@ -7,7 +6,9 @@ const FindGitProfile = () => {
             <div className="search-content" >
                 <h3 className="search-title" >Encontre um perfil Github</h3>
                 <input placeholder="Usuário Github" className="search-input" type="text" />
-                <Button linkTo="/" >Encontrar</Button>
+                <div className="button-container">
+                    Encontrar
+                </div>
             </div>
         </div>
     );
