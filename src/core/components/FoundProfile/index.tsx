@@ -7,7 +7,7 @@ type Props = {
 }
 
 const FoundProfile = ({ data }: Props) => {
-    const formatedCreatedAt = dayjs(data.created_at).format('DD-MM-YYYY');
+    const formatedCreatedAt = dayjs(data.created_at).format('DD/MM/YYYY');
 
     return (
         <div className="found-container" >
