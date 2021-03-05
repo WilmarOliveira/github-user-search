@@ -1,4 +1,5 @@
 import { Profile } from '../../types/Profile';
+import dayjs from 'dayjs'
 import './styles.css';
 
 type Props = {
@@ -6,6 +7,8 @@ type Props = {
 }
 
 const FoundProfile = ({ data }: Props) => {
+    const formatedCreatedAt = dayjs(data.created_at).format('DD-MM-YYYY');
+
     return (
         <div className="found-container" >
             <div className="found-content" >
@@ -15,7 +18,7 @@ const FoundProfile = ({ data }: Props) => {
                         alt={data.name}
                         src={data.avatar_url} 
                     />
-                    <div className="button-container" >Ver perfil</div>
+                    <div className="button-container" ><a target="_blank" rel="noreferrer" href={data.html_url} >Ver perfil</a></div>
                 </div>
                 <div className="right-found-content" >
                     <div>
@@ -29,7 +32,7 @@ const FoundProfile = ({ data }: Props) => {
                             <span className="details-medium" ><strong>Empresa:</strong>{data.company}</span>
                             <span className="details-medium" ><strong>Website/Blog:</strong>{data.blog}</span>
                             <span className="details-medium" ><strong>Localidade:</strong>{data.location}</span>
-                            <span className="details-medium" ><strong>Membro desde:</strong>{data.created_at}</span>
+                            <span className="details-medium" ><strong>Membro desde:</strong>{formatedCreatedAt}</span>
                         </div>
                     </div>
                 </div>

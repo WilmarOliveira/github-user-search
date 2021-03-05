@@ -37,3 +37,14 @@
     line-height: 24px;
     color: #BFBFBF;
 }
+
+.loaders {
+    display: flex;
+    width: 1251px;
+    height: 387px;
+    margin: 55px auto;
+}
+
+.info-loader {
+    margin-top: 35px;
+}

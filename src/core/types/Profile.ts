@@ -7,5 +7,6 @@ export type Profile = {
     public_repos: number;
     followers: number;
     following: number;
+    html_url: string;
     name: string;
 }
