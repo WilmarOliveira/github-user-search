@@ -78,3 +78,7 @@
     color: #737373;
     margin-bottom: 5px;
 }
+
+.details-medium strong {
+    padding-right: 5px;
+}
