@@ -1,32 +1,38 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import FoundProfile from '../../core/components/FoundProfile';
+import { Profile } from '../../core/types/Profile';
 import './styles.css';
 
 const FindGitProfile = () => {
-    const [data, setData] = useState({});
+    const [name, setName] = useState('');
+    const [data, setData] = useState<Profile>();
 
-    const handleOnSearchProfile = () => {
-        axios.get('https://api.github.com/users/WilmarOliveira')
-            .then(response => setData(response))
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value)
     }
 
-    useEffect(() => {
-
-    }, [])
+    const handleOnSearchProfile = () => {
+        axios.get(`https://api.github.com/users/${name}`)
+            .then(response => {
+                setData(response.data)
+            })
+    }
 
     return (
         <>
             <div className="search-container" >
                 <div className="search-content" >
                     <h3 className="search-title" >Encontre um perfil Github</h3>
-                    <input placeholder="Usuário Github" className="search-input" type="text" />
+                    <input value={name} placeholder="Usuário Github" className="search-input" type="text" onChange={handleOnChange} />
                     <div onClick={handleOnSearchProfile} className="button-container">
                         Encontrar
                 </div>
                 </div>
             </div>
-            <FoundProfile />
+            {(data && JSON.stringify(data) !== '{}') &&
+                <FoundProfile data={data} />
+            }
         </>
     );
 }
